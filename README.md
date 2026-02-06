@@ -1,5 +1,7 @@
 # NLP Sentiment Analysis API
 
+Kenneth Plum Toft - s195171
+
 ## Running with/without docker
 
 **Important:** You need to set your CampusAI API key as an environment variable, if you wish to run the endpoint /v1/sentiment.
