@@ -2,7 +2,7 @@
 
 ## Running with/without docker
 
-**Important:** You need to set your CampusAI API key as an environment variable, if you wish to run the endpoint /v1/sentiment. The more simple endpoint /v0/sentiment, can be run without doing so.
+**Important:** You need to set your CampusAI API key as an environment variable, if you wish to run the endpoint /v1/sentiment.
 
 ### Build the Docker image:
 ```bash
