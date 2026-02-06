@@ -21,7 +21,7 @@ class TextInput(BaseModel):
 
 @app.post("/v0/sentiment")
 def analyze_sentiment(text: TextInput):
-    logger.info(f"v1/sentiment called with text: {text.text[:50]}...")
+    logger.info(f"v0/sentiment called with text: {text.text[:50]}...")
     lowered_text = text.text.lower()
 
     if 'god' in lowered_text or 'good' in lowered_text:
@@ -34,7 +34,7 @@ def analyze_sentiment(text: TextInput):
 
 @app.post("/v1/sentiment")
 def send_message(text: TextInput):
-        logger.info(f"v2/sentiment_campusai called with text: {text.text[:50]}...")
+        logger.info(f"v1/sentiment called with text: {text.text[:50]}...")
         api_url = f"https://chat.campusai.compute.dtu.dk/api/chat/completions"
 
         api_key = os.getenv("CAMPUSAI_API_KEY")
@@ -52,7 +52,7 @@ def send_message(text: TextInput):
             "model": "Gemma3",
             "messages": [
                 {"role": "user", "content": 
-                 f"""Classify the sentiment of the following text as positive, negative, or neutral within the range of (-3, 3). 3 being very positive, -3 very negative and 0 being neutral. 
+                 f"""Classify the sentiment of the following text as positive, negative, or neutral within the range of (-5, 5). 5 being very positive, 3 being good, -5 very negative, -3 being negative, and 0 being neutral. 
                  Return only the number with no formatting
                  Text: "{text.text}"
                  Sentiment:"""}
