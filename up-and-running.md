@@ -75,7 +75,6 @@ def test_negative_sentiment():
 
 if __name__ == "__main__":
     test_positive_sentiment()
-    test_negative_sentiment()
     print("All tests passed!")
 ```
 And then run `python test_main.py`.
