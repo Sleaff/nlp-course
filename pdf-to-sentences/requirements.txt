@@ -1,0 +1,7 @@
+fastapi
+uvicorn[standard]
+requests
+markitdown[pdf]
+python-multipart
+marker-pdf
+spacy
